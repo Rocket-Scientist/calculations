@@ -24,6 +24,7 @@ main () {
      dt = 1; /*let them chose this in proper one*/
      density = ;/*hmmmmmmmmm*/
      gravity = gravity = (gravitational_constant * mass_of_earth) / (pow(radius_of_earth + altitude,2));
+     acceleration = calc_acceleration;
      }
 
 void mechanics () {
