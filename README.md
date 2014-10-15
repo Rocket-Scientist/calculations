@@ -23,20 +23,18 @@ main () {
      mass = 1; /*this is madeup*/
      dt = 1; /*let them chose this in proper one*/
      gravity = gravity = (gravitational_constant * mass_of_earth) / (pow(radius_of_earth + altitude,2));
-     density = calc_density;
-     acceleration = calc_acceleration();
      mechanics();
      }
 
 void mechanics (current.row, velocity, altitude, gravity, mass, density, drag, acceleration) {
      while (current.row > 1001) {
+           density = calc_density(); /*wrong*/
+           drag = calc_drag();
+           acceleration = calc_acceleration();
            velocity = calc_velocity();
            altitude = calc_altitude();
            gravity = calc_gravity();
            mass = calc_mass();
-           density = calc_density(); /*wrong*/
-           drag = calc_drag();
-           acceleration = calc_acceleration();
            current.row = current.row + 1;
            }
            
