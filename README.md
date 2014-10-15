@@ -22,8 +22,8 @@ main () {
      altitude = 0;
      mass = 1; /*this is madeup*/
      dt = 1; /*let them chose this in proper one*/
-     density = ;/*hmmmmmmmmm*/
      gravity = gravity = (gravitational_constant * mass_of_earth) / (pow(radius_of_earth + altitude,2));
+     density = calc_density;
      acceleration = calc_acceleration();
      mechanics();
      }
