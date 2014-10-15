@@ -24,10 +24,11 @@ main () {
      dt = 1; /*let them chose this in proper one*/
      density = ;/*hmmmmmmmmm*/
      gravity = gravity = (gravitational_constant * mass_of_earth) / (pow(radius_of_earth + altitude,2));
-     acceleration = calc_acceleration;
+     acceleration = calc_acceleration();
+     mechanics();
      }
 
-void mechanics () {
+void mechanics (current.row, velocity, altitude, gravity, mass, density, drag, acceleration) {
      while (current.row > 1001) {
            velocity = calc_velocity();
            altitude = calc_altitude();
