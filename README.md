@@ -4,7 +4,7 @@ calculations
 #include <stdio.h>
 #include <math.h>
 #include <grx20.h>
-#define pressure_at_sea_level 101325, gravitational_constant 6.67384*pow(10, -11), radius_of_earth 6378100, mass_of_earth 5.9726*pow(10, 24), boltzman_constant 1.3806488 * pow(10, -23)
+#define pressure_at_sea_level 101325, gravitational_constant 6.67384*pow(10, -11, radius_of_earth 6378100, mass_of_earth 5.9726*pow(10, 24), boltzman_constant 1.3806488 * pow(10, -23), gas_constant_R 8.31 4462175, molar_mass_of_air 0.02897
 
 float velocity, altitude, gravity, acceleration, mass, density, thrust, drag_coefficient, area_which_experiences_drag, air_temp, dt, fuel_rate, drag;
 int current.row;
@@ -59,7 +59,7 @@ float calc_mass(mass, fuel_rate, dt) {
       }
 
 float calc_density(density, mass, gravity, altitude, air_temp) {
-      density = (pressure_at_sea_level * pow(exp,(-1 * mass * gravity * altitude) / (boltzman_constant * air_temp))) / (gravity * altitude); /*wrong*/
+      density = ((pressure_at_sea_level * molar_mass_of_air)/ (air_temp * gas_constant_R)) * pow(exp,(-1 * mass * gravity * altitude) / (boltzman_constant * air_temp)) ; /*wrong*/
       return density;
       }
 
